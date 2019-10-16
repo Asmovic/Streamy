@@ -1,6 +1,6 @@
 import { SIGN_IN, SIGN_OUT } from '../actions/types'
 const INITIAL_STATE = {
-    isSignedIn: false,
+    isSignedIn: null,
     userId: null
 }
 

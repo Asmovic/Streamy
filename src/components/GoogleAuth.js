@@ -25,16 +25,10 @@ class GoogleAuth extends Component {
         }
     }
     onSignedInClick() {
-        if (this.auth) {
-            this.auth.signIn()
-        }
-
+        this.auth.signIn()
     }
     onSignedOutClick() {
-        if (this.auth) {
-            this.auth.signOut()
-        }
-
+        this.auth.signOut()
     }
     renderButton() {
         if (this.props.auth.isSignedIn === null) {

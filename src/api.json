@@ -1,0 +1,6 @@
+{
+    "PRODDB": "https://streamy-db.herokuapp.com",
+    "PRODSERVER": "https://streamy-server.herokuapp.com",
+    "LOCALSERVER": "http://localhost:8000",
+    "LOCALDB": "http://localhost:3001"
+}

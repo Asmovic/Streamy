@@ -11,13 +11,20 @@ class StreamShow extends Component {
         this.state = {
             url: ''
         }
-
-        if (window.location.host.match === 'http://localhost:3000' || 'https://localhost:3000') {
-            this.setState({ url: LOCALSERVER })
-        } else {
-            this.setState({ url: PRODSERVER })
-        }
     }
+
+    componentWillMount() {
+        var url = '';
+        if (window.location.host.match(/localhost/)) {
+            // console.log('match...', window.location.host.match)
+            url = LOCALSERVER
+        } else {
+            url = PRODSERVER
+        }
+
+        this.setState({ url });
+    }
+
     componentDidMount() {
         const { id } = this.props.match.params;
         this.props.fetchStream(id);

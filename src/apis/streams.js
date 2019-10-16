@@ -2,10 +2,11 @@ import axios from 'axios';
 import { PRODDB, LOCALDB } from '../api.json';
 
 var url = '';
-if (window.location.host.match === 'http://localhost:3000' || 'https://localhost:3000') {
+if (window.location.host.match(/localhost/)) {
+    // console.log('match...', window.location.host.match)
     url = LOCALDB
 } else {
-    url = PRODDB 
+    url = PRODDB
 }
 export default axios.create({
 

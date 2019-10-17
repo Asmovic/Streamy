@@ -3,7 +3,7 @@ import { PRODDB, LOCALDB } from '../api.json';
 
 var url = '';
 if (window.location.host.match(/localhost/)) {
-    // console.log('match...', window.location.host.match)
+    console.log('match...', window.location.host)
     url = LOCALDB
 } else {
     url = PRODDB
